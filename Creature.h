@@ -2,6 +2,7 @@
 #define Creature
 #include <string>
 #include <cstdlib> //rand function
+#inclue <Graph.h>
 
 //***************************
 // Class for use as the player character
