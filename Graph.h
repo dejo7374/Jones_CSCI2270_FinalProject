@@ -10,10 +10,11 @@
 // a number and stores a randomly determined description
 // along with a vector of adjacent rooms
 //***************************
+struct adjRoom;
+
 struct Room{
     int roomNumber;
     std::string description;
-    bool enemyPresent;
     bool visited;
     std::vector<adjRoom> adj; //
 };
@@ -22,17 +23,20 @@ struct adjRoom{
     Room *nextRoom; //destination room
 };
 
+struct queueV{
+int distance; //number of edges
+std::vector<Room*> path; //vertices on the path
+};
 
 class Graph()
 {
     public:
         Graph();
+        Graph(int numRooms);
         ~Graph();
         void addRoom(int roomNumber);
-        Room* createRoom(int roomNumber);
+        void setRoomDescription(int roomNumber);
         void addEdge(int room1, int room2);
-        void placeEnemies();
-        void
     protected:
     private:
         std::vector<Room> rooms;

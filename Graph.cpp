@@ -12,3 +12,12 @@ Graph::~Graph(){
  //destructor
 }
 
+void Graph::addRoom(int roomNumber){
+
+}
+
+void Graph::setRoomDescription(int roomNumber){
+
+
+}
+
