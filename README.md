@@ -2,10 +2,11 @@
 Final Project for CSCI 2270
 
 Project Summary:
-I will be creating a text-based game library using a graph structure to define the locations within the game world. I will be creating an abstract character class that will be used to
-define both the player character and the creatures that population the game board. I will include methods for, defining characters and creature game statistics, performing several graph traversals to seed the game board with
-enemies, determine the longest path to a randomly placed "boss" monster, and set starting location accordingly. Additionally, I will define methods for resolving conflict between
-the player character and the enemies, "leveling up" to increase character statistics.
+I will be creating a text-based game library using a random graph structure to define the locations within the game world. I will be creating an abstract character class that will be used to
+define the player character. The player will navigate around the "maze" and the number of steps taken are recorded.
+Using a random starting location and source destination to determine the shortest path and compare it aganst the recorded number of steps
+to determine a final score.
+
 
 How to Run:
 
@@ -15,9 +16,11 @@ Dependencies:
 
 System Requirements:
 
+
 Group Members:
 Devon Jones
 
 Contributers:
+
 
 Open Issues/Bugs:
