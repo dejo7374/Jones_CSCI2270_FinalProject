@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include "Graph.h"
+#include "Creature.h"
 
 using namespace std;
 

@@ -1,8 +1,9 @@
 #ifndef Graph
 #define Graph
+
 #include <iostream>
 #include <vector>
-#include <Creature.h>
+#include "Creature.h"
 
 //***************************
 // Graph class to create a "map" of rooms
@@ -28,11 +29,9 @@ int distance; //number of edges
 std::vector<Room*> path; //vertices on the path
 };
 
-class Graph()
-{
+class Graph{
     public:
         Graph();
-        Graph(int numRooms);
         ~Graph();
         void addRoom(int roomNumber);
         void setRoomDescriptions(int roomNumber);
