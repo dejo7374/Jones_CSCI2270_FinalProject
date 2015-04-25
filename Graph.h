@@ -35,7 +35,7 @@ class Graph()
         Graph(int numRooms);
         ~Graph();
         void addRoom(int roomNumber);
-        void setRoomDescription(int roomNumber);
+        void setRoomDescriptions(int roomNumber);
         void addEdge(int room1, int room2);
     protected:
     private:
