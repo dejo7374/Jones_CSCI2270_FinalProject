@@ -37,6 +37,8 @@ class Graph{
         void addRoom(int number);
         void setRoomDescription(int roomNumber);
         void addEdge(int room1, int room2);
+        std::string randomDescription();
+        Room getRoom(int num);
     protected:
     private:
         std::vector<Room> rooms;
