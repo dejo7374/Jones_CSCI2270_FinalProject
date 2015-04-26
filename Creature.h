@@ -1,5 +1,5 @@
-#ifndef Creature
-#define Creature
+#ifndef Creature_H
+#define Creature_H
 #include <string>
 #include <cstdlib> //rand function
 #include "Graph.h"
@@ -16,7 +16,7 @@ class Creature
     public:
         Creature();
         //getter methods
-        Room* getLocation();
+        Room getLocation();
     protected:
     private:
         Room *location;
@@ -25,4 +25,4 @@ class Creature
 
 
 
-#endif // Creature
+#endif // Creature_H
