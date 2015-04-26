@@ -1,5 +1,5 @@
-#ifndef Graph
-#define Graph
+#ifndef Graph_H
+#define Graph_H
 
 #include <iostream>
 #include <vector>
@@ -34,10 +34,11 @@ class Graph{
         Graph();
         ~Graph();
         void addRoom(int roomNumber);
-        void setRoomDescriptions(int roomNumber);
+        void setRoomDescription(int roomNumber);
         void addEdge(int room1, int room2);
     protected:
     private:
         std::vector<Room> rooms;
 };
-#endif // GRAPH
+
+#endif // GRAPH_H

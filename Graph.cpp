@@ -21,9 +21,9 @@ void Graph::addRoom(int roomNumber){
 void Graph::setRoomDescription(int roomNumber){
 
     Room *s;
-    for(int i = 0; i <vertices.size();i++){
+    for(int i = 0; i <rooms.size();i++){
         if(rooms[i].roomNumber == roomNumber){
-            s = &vertices[i];
+            s = &rooms[i];
         }
     }
     s->visited = true; //visted starting vertex
