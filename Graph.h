@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <vector>
-#include "Creature.h"
+#include <string>
+
 
 //***************************
 // Graph class to create a "map" of rooms
@@ -14,7 +15,7 @@
 struct adjRoom;
 
 struct Room{
-    int roomNumber;
+    int roomNum;
     std::string description;
     bool visited;
     std::vector<adjRoom> adj; //
@@ -33,7 +34,7 @@ class Graph{
     public:
         Graph();
         ~Graph();
-        void addRoom(int roomNumber);
+        void addRoom(int number);
         void setRoomDescription(int roomNumber);
         void addEdge(int room1, int room2);
     protected:
