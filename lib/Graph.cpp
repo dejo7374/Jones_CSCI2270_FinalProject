@@ -24,7 +24,7 @@ Graph::~Graph(){
 
 void Graph::addRoom(int number){
     bool found = false;
-    for(int i = 0; i < rooms.size(); i++){
+    for(size_t i = 0; i < rooms.size(); i++){
         if(rooms[i].roomNum == number){
             found = true;
         }
@@ -48,9 +48,9 @@ void Graph::addRoom(int number){
 
 void Graph::addEdge(int room1, int room2){
 
-    for(int i = 0; i < rooms.size(); i++){
+    for(size_t i = 0; i < rooms.size(); i++){
         if(rooms[i].roomNum == room1){
-            for(int j = 0; j < rooms.size(); j++){
+            for(size_t j = 0; j < rooms.size(); j++){
                 if(rooms[j].roomNum == room2 && i != j){
                     adjRoom av;
                     av.nextRoom = &rooms[j];
@@ -87,7 +87,7 @@ string Graph::randomDescription(){
 void Graph::setRoomDescription(int roomNumber){
 
     Room *s;
-    for(int i = 0; i <rooms.size();i++){
+    for(size_t i = 0; i <rooms.size();i++){
         if(rooms[i].roomNum == roomNumber){
             s = &rooms[i];
             s->description = randomDescription();
