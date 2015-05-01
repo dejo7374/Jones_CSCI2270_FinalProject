@@ -2,8 +2,6 @@
 #define Creature_H
 #include "Graph.h"
 
-// Edit: Removed <string> and <cstdlib>, uneeded here for library to work.
-
 //***************************
 // Class for use as the player character
 // and enemies. Store statistics to
@@ -15,7 +13,7 @@ class Creature
 {
     public:
         Creature();
-		~Creature(); // Added destructor
+		~Creature();
         //getter methods
         Room* getLocation();
     protected:

@@ -1,6 +1,5 @@
 #ifndef Graph_H
 #define Graph_H
-// Removed <string> and <iostream>
 #include <vector>
 
 //***************************
