@@ -1,10 +1,7 @@
 #ifndef Graph_H
 #define Graph_H
-
-#include <iostream>
+// Removed <string> and <iostream>
 #include <vector>
-#include <string>
-
 
 //***************************
 // Graph class to create a "map" of rooms
@@ -18,7 +15,7 @@ struct Room{
     int roomNum;
     std::string description;
     bool visited;
-    std::vector<adjRoom> adj; //
+    std::vector<adjRoom> adj;
 };
 
 struct adjRoom{

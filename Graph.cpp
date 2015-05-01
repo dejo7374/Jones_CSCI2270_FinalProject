@@ -1,12 +1,17 @@
 #include <iostream>
-#include <vector>
 #include <queue>
-#include <cstdlib> //use of rand function
-#include <ctime>
+#include <random> // Need for the random_device and mersenne twister, a pseudo-random number generator (pRNG). It's like rand(), but better in many ways.
+#include <vector>
 #include "Graph.h"
 
-
 using namespace std;
+
+random_device seed; // Gets a random number from /dev/random to seed the pseudo-random number generator (pRNG).
+/*
+	This is a mersenne twister, a very commonly used pRNG. It's not vital that it is used in this project, but it is recommended to use these types of pRNGs
+	instead of rand().
+*/
+mt19937 generator(seed()); // Creates a mersenne twister and seeds it with a random number from the random_device seed.
 
 Graph::Graph(){
 
@@ -63,8 +68,15 @@ void Graph::addEdge(int room1, int room2){
 //***************************
 string Graph::randomDescription(){
     string description;
-    srand(time(NULL)); //set seed for rand to system time
-    switch ( (rand()%4) ){
+
+	/*
+	If you are using rand(), you should only call srand once in your entire program. Because you're seeding and calling rand() in the same function, 
+	it will return the exact same number every time as rand() is being reset each time srand() is called.
+	*/
+
+    //srand(time(NULL)); //set seed for rand to system time
+
+    switch ( generator() % 4 ){
     case 0:
         description = "A dingy stone room.";
     case 1:
@@ -92,4 +104,3 @@ void Graph::setRoomDescription(int roomNumber){
 Room Graph::getRoom(int num){
     return rooms[num];
 }
-
