@@ -37,6 +37,7 @@ int main()
         gameB.setRoomDescription(i);
     }
     Character user;
+    cout << "==============================" << endl;
     cout << "attribute 100 total attribute points to your character" << endl;
     cout << "==============================" << endl;
 
