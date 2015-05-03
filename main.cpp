@@ -38,6 +38,8 @@ int main()
     }
     Character user;
     cout << "attribute 100 total attribute points to your character" << endl;
+    cout << "==============================" << endl;
+
     int userPoints = 100;
     while(userPoints > 0)
     {
